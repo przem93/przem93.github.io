@@ -14,22 +14,22 @@ interface Props {
   styles?: StyleXStyles
 }
 
-const surfaceStyles = stylex.create({
-  color: (color: Colors) => ({ 
+const typographyStyles = stylex.create({
+  color: (color: Colors) => ({
     color: colorTokens[color],
   }),
-  fontSize: (fontSize: FontSizes) => ({ 
+  fontSize: (fontSize: FontSizes) => ({
     fontSize: fontSizeTokens[fontSize],
   }),
-  fontWeight: (fontWeight: FontWeights) => ({ 
+  fontWeight: (fontWeight: FontWeights) => ({
     fontWeight: fontWeightTokens[fontWeight],
   }),
 })
 
 export const Span = ({ children, color, fontSize, fontWeight, styles, }: Props) => <span {...stylex.props(
-  color && surfaceStyles.color(color),
-  fontSize && surfaceStyles.fontSize(fontSize),
-  fontWeight && surfaceStyles.fontWeight(fontWeight),
+  color && typographyStyles.color(color),
+  fontSize && typographyStyles.fontSize(fontSize),
+  fontWeight && typographyStyles.fontWeight(fontWeight),
   styles
 )}>
   {children}

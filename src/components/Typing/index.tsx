@@ -85,6 +85,6 @@ export const Typing = ({ delay = 0, text, time = 1200, showDashAfterFinish }: Pr
   
   return <>
     {text.slice(0, letterIndex)}
-    {showDash && <Span color="green2" styles={!isTyping && styles.dash}>_</Span>}
+    {showDash && <Span styles={!isTyping && styles.dash}>_</Span>}
   </>
 }
