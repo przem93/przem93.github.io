@@ -422,6 +422,13 @@
     "@stylexjs/shared" "0.5.1"
     "@stylexjs/stylex" "0.5.1"
 
+"@stylexjs/eslint-plugin@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@stylexjs/eslint-plugin/-/eslint-plugin-0.5.1.tgz#5543c7985d2eb841c5807b5dea7c58d5d72d3f0b"
+  integrity sha512-bt5lZZAgOqscmF09wXyNNV7K2dkLgqY8mTabezf0NMkPmm4BvYuKij+aMo41Z56AdA2WX4NyCb6GaVUwihvmRQ==
+  dependencies:
+    micromatch "^4.0.5"
+
 "@stylexjs/nextjs-plugin@^0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@stylexjs/nextjs-plugin/-/nextjs-plugin-0.5.1.tgz#0008620581c98dfbbfbfc25dba4f08a186dd39c7"
@@ -433,6 +440,16 @@
     "@babel/plugin-syntax-typescript" "^7.22.5"
     "@stylexjs/babel-plugin" "^0.5.1"
 
+"@stylexjs/open-props@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@stylexjs/open-props/-/open-props-0.5.1.tgz#dd0e8fc62335aa3704480151fbf7bcf29ce2d1d2"
+  integrity sha512-eLDsfL5xCdtQNfYbGMXnztAO0+q5h0v0JcW0LwL5d9lyub03jH2nbwqk2ThT1mPKWR/5JWMSNg9thHDpvqtRQg==
+  dependencies:
+    css-mediaquery "^0.1.2"
+    invariant "^2.2.4"
+    styleq "0.1.3"
+    utility-types "^3.10.0"
+
 "@stylexjs/shared@0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@stylexjs/shared/-/shared-0.5.1.tgz#c61393cd2f4b7fb19a4d9b636710f5a405c37479"
@@ -440,7 +457,7 @@
   dependencies:
     postcss-value-parser "^4.1.0"
 
-"@stylexjs/stylex@0.5.1":
+"@stylexjs/stylex@0.5.1", "@stylexjs/stylex@^0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@stylexjs/stylex/-/stylex-0.5.1.tgz#e604908c4933d01474bff7c909cb9cef659bd56c"
   integrity sha512-KO55dRB1+LhUo9OxfHqH5FwO2F0HdTe4g6fyRJb7JT5FiWEA/vYJ9MY7W8NdMSprW/7FeQKnSg6u5WlHU2ji2g==
@@ -1960,7 +1977,7 @@ merge2@^1.3.0, merge2@^1.4.1:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-micromatch@^4.0.4:
+micromatch@^4.0.4, micromatch@^4.0.5:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.5.tgz#bc8999a7cbbf77cdc89f132f6e467051b49090c6"
   integrity sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==
