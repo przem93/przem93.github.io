@@ -8,4 +8,6 @@ module.exports = stylexPlugin({
     '@/*': [path.join(__dirname, '*')],
   },
   rootDir: __dirname,
-})({});
+})({
+  output: 'export',
+});
