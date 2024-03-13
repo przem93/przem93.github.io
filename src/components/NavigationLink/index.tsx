@@ -17,7 +17,7 @@ const styles = stylex.create({
     textShadow: {
       default: 'none',
       ':hover': `3px 4px 0 ${colorTokens.green1}`
-    }
+    },
   },
   current: {
     textShadow: `3px 4px 0 ${colorTokens.green1}`

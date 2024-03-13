@@ -7,10 +7,7 @@ const styles = stylex.create({
   }
 })
 
-export default function AboutMe() {
-  return (
-    <div>
-      <H2 styles={styles.center}>Working in progress...</H2>
-    </div>
-  );
+
+export default function Custom404() {
+  return <H2 styles={styles.center}>404 - Page Not Found</H2>
 }

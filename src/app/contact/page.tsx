@@ -7,7 +7,7 @@ const styles = stylex.create({
   }
 })
 
-export default function AboutMe() {
+export default function Contact() {
   return (
     <div>
       <H2 styles={styles.center}>Working in progress...</H2>
