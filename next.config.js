@@ -10,5 +10,4 @@ module.exports = stylexPlugin({
   images: {
     unoptimized: true
   },
-  appDir
 });
