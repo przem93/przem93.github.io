@@ -53,8 +53,26 @@ interface Params {
   paddingsProps?: PaddingProps
 }
 
-export const getSpaces = ({ gap, marginsProps, paddingsProps }: Params) => ([
-  gap ? otherSpaces.gap(gap) : undefined,
-  ...(marginsProps ? (Object.keys(marginsProps) as MarginKey[]).map((key) => marginStyles[key](marginsProps[key] ?? 0)) : []),
-  ...(paddingsProps ? (Object.keys(paddingsProps) as PaddingKey[]).map((key) => paddingStyles[key](paddingsProps[key] ?? 0)) : []),
-])
+export const getSpaces = ({ gap, marginsProps, paddingsProps }: Params) => {
+  let spaces = []
+
+  if (gap) {
+    spaces.push(otherSpaces.gap(gap))
+  }
+
+  if (marginsProps) {
+    spaces = [
+      ...spaces,
+      (Object.keys(marginsProps) as MarginKey[]).map((key) => marginStyles[key](marginsProps[key] ?? 0))
+    ]
+  }
+
+  if (paddingsProps) {
+    spaces = [
+      ...spaces,
+      (Object.keys(paddingsProps) as PaddingKey[]).map((key) => paddingStyles[key](paddingsProps[key] ?? 0))
+    ]
+  }
+
+  return spaces
+}

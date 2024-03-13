@@ -8,7 +8,7 @@ interface Props {
   flexDirection?: CSSProperties['flexDirection']
   gap?: number
   justifyContent?: CSSProperties['justifyContent']
-  styles?: StyleXStyles
+  styles?: [StyleXStyles | undefined] | StyleXStyles
 }
 
 const flexStyles = stylex.create({
