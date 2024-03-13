@@ -1,4 +1,4 @@
-import { Base, BaseProps } from "@/components/typography/Base"
+import { Base, BaseProps } from "../_Base"
 
 type Props = Omit<BaseProps, 'component'>
 
