@@ -217,7 +217,7 @@ export default function Home() {
         </div>
         <Image
           {...stylex.props(styles.avatar)}
-          src="/avatar.jpeg"
+          src="/avatar.png"
           width={360}
           height={360}
           alt="Avatar"
