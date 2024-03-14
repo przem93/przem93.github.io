@@ -7,7 +7,10 @@ interface Props {
 
 const styles = stylex.create({
   main: {
-    minHeight: '100svh'
+    backgroundImage: 'url("/line.svg")',
+    backgroundPosition: 'bottom center',
+    backgroundRepeat: 'repeat-x',
+    minHeight: '100svh',
   }
 })
 

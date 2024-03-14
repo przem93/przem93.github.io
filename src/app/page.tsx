@@ -25,7 +25,6 @@ const boxShadowAnimation = stylex.keyframes({
 const styles = stylex.create({
   appContainer: {
     maxWidth: 1024,
-    margin: '100px auto'
   },
   avatar: {
     animationComposition: 'add',
@@ -36,21 +35,177 @@ const styles = stylex.create({
     animationTimingFunction: 'ease-in-out',
     borderRadius: '100vw',
   },
-  techStackHeader: {
+  center: {
     textAlign: 'center'
   },
 })
 
-const spaces = getSpaces({
+const appContainerSpaces = getSpaces({
+  marginsProps: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  paddingsProps: {
+    paddingTop: 25,
+    paddingBottom: 8.5
+  }
+})
+
+const techStackSpaces = getSpaces({
   marginsProps: {
     marginTop: 43,
     marginBottom: 16
   }
 })
 
+const fullNameSpaces = getSpaces({
+  marginsProps: {
+    marginTop: 21,
+  }
+})
+
+const animationAngle60 = stylex.keyframes({
+  "0%": {
+    marginTop: 29.992675197034483
+  },
+  "16%": {
+    marginTop: -28.363354647633503
+  },
+  "33%": {
+    marginTop: 24.034579072014914
+  },
+  "50%": {
+    marginTop: -17.41833552636943
+  },
+  "66%": {
+    marginTop: 9.1443186330665
+  },
+  "83%": {
+    marginTop: 0
+  },
+  "100%": {
+    marginTop: -9.1443186330665
+  }
+})
+const animationAngle120 = stylex.keyframes({
+  "0%": {
+    marginTop: -28.363354647633503
+  },
+  "16%": {
+    marginTop: 24.034579072014914
+  },
+  "33%": {
+    marginTop: -17.41833552636943
+  },
+  "50%": {
+    marginTop: 9.1443186330665
+  },
+  "66%": {
+    marginTop: 0
+  },
+  "83%": {
+    marginTop: -9.1443186330665
+  },
+  "100%": {
+    marginTop: 17.41833552636943
+  }
+})
+const animationAngle180 = stylex.keyframes({
+  "0%": {
+    marginTop: 24.034579072014914
+  },
+  "16%": {
+    marginTop: -17.41833552636943
+  },
+  "33%": {
+    marginTop: 9.1443186330665
+  },
+  "50%": {
+    marginTop: 0
+  },
+  "66%": {
+    marginTop: -9.1443186330665
+  },
+  "83%": {
+    marginTop: 17.41833552636943
+  },
+  "100%": {
+    marginTop: -24.034579072014914
+  }
+})
+const animationAngle240 = stylex.keyframes({
+  "0%": {
+    marginTop: -17.41833552636943
+  },
+  "16%": {
+    marginTop: 9.1443186330665
+  },
+  "33%": {
+    marginTop: 0
+  },
+  "50%": {
+    marginTop: -9.1443186330665
+  },
+  "66%": {
+    marginTop: 17.41833552636943
+  },
+  "83%": {
+    marginTop: -24.034579072014914
+  },
+  "100%": {
+    marginTop: 28.363354647633503
+  }
+})
+const animationAngle300 = stylex.keyframes({
+  "0%": {
+    marginTop: 9.1443186330665
+  },
+  "16%": {
+    marginTop: 0
+  },
+  "33%": {
+    marginTop: -9.1443186330665
+  },
+  "50%": {
+    marginTop: 17.41833552636943
+  },
+  "66%": {
+    marginTop: -24.034579072014914
+  },
+  "83%": {
+    marginTop: 28.363354647633503
+  },
+  "100%": {
+    marginTop: -29.992675197034483
+  }
+})
+const animationAngle360 = stylex.keyframes({
+  "0%":{
+    marginTop: 0
+  },
+  "16%": {
+    marginTop: -9.1443186330665
+  },
+  "33%": {
+    marginTop: 17.41833552636943
+  },
+  "50%": {
+    marginTop: -24.034579072014914
+  },
+  "66%": {
+    marginTop: 28.363354647633503
+  },
+  "83%": {
+    marginTop: -29.992675197034483
+  },
+  "100%": {
+    marginTop: 28.767471702429194
+  }
+})
+
 export default function Home() {
   return (
-    <div {...stylex.props(styles.appContainer)}>
+    <div {...stylex.props(styles.appContainer, appContainerSpaces)}>
       <Flex alignItems="center" gap={16}>
         <div>
           <BackgroundTitle text="My name is Przemek. I am Software Engineer." />
@@ -68,7 +223,7 @@ export default function Home() {
           alt="Avatar"
         />
       </Flex>
-      <H1 styles={[...spaces, styles.techStackHeader]}>Tech <Span fontWeight="light">stack</Span></H1>
+      <H1 styles={[...techStackSpaces, styles.center]}>Tech <Span fontWeight="light">stack</Span></H1>
       <Flex justifyContent="space-around">
         <TechStackItem 
           alt="React.js technology"
@@ -104,6 +259,11 @@ export default function Home() {
           withoutBackground
         />
       </Flex>
+      <div {...stylex.props(fullNameSpaces, styles.center)}>
+        <Span fontWeight="light" fontSize="medium">
+          <Span fontWeight="bold">P</Span>rzemysław <Span fontWeight="bold">R</Span>atajczak
+        </Span>
+      </div>
     </div>
   );
 }

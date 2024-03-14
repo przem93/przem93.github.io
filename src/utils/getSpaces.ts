@@ -4,48 +4,50 @@ import stylex from "@stylexjs/stylex"
 const paddings = ['paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight'] as const
 const margins = ['marginTop', 'marginBottom', 'marginLeft', 'marginRight'] as const
 
-const getSpace = (multiply: number) => multiply * spaceBase
+type SpaceValue = number | string
+
+const getSpace = (value: SpaceValue) => typeof value === "string" ? value : value * spaceBase
 
 const paddingStyles = stylex.create({
-  paddingTop: (multiply: number) => ({
-    paddingTop: getSpace(multiply)
+  paddingTop: (value: SpaceValue) => ({
+    paddingTop: getSpace(value)
   }),
-  paddingBottom: (multiply: number) => ({
-    paddingBottom: getSpace(multiply)
+  paddingBottom: (value: SpaceValue) => ({
+    paddingBottom: getSpace(value)
   }),
-  paddingLeft: (multiply: number) => ({
-    paddingLeft: getSpace(multiply)
+  paddingLeft: (value: SpaceValue) => ({
+    paddingLeft: getSpace(value)
   }),
-  paddingRight: (multiply: number) => ({
-    paddingRight: getSpace(multiply)
+  paddingRight: (value: SpaceValue) => ({
+    paddingRight: getSpace(value)
   })
 })
 
 const marginStyles = stylex.create({
-  marginTop: (multiply: number) => ({
-    marginTop: getSpace(multiply)
+  marginTop: (value: SpaceValue) => ({
+    marginTop: getSpace(value)
   }),
-  marginBottom: (multiply: number) => ({
-    marginBottom: getSpace(multiply)
+  marginBottom: (value: SpaceValue) => ({
+    marginBottom: getSpace(value)
   }),
-  marginLeft: (multiply: number) => ({
-    marginLeft: getSpace(multiply)
+  marginLeft: (value: SpaceValue) => ({
+    marginLeft: getSpace(value)
   }),
-  marginRight: (multiply: number) => ({
-    marginRight: getSpace(multiply)
+  marginRight: (value: SpaceValue) => ({
+    marginRight: getSpace(value)
   })
 })
 
 const otherSpaces = stylex.create({
-  gap: (multiply: number) => ({
-    gap: getSpace(multiply)
+  gap: (value: SpaceValue) => ({
+    gap: getSpace(value)
   }),
 })
 
 type MarginKey = typeof margins[number]
-type MarginProps = {[k in MarginKey]?: number }
+type MarginProps = {[k in MarginKey]?: SpaceValue }
 type PaddingKey = typeof paddings[number]
-type PaddingProps = {[k in PaddingKey]?: number }
+type PaddingProps = {[k in PaddingKey]?: SpaceValue }
 
 interface Params {
   gap?: number
