@@ -18,7 +18,7 @@ const styles = stylex.create({
       ':hover': `drop-shadow(5px 7px 0 ${colorTokens.green1})`
     },
     lineHeight: 0,
-    transition: 'filter 0.2s ease-in-out',
+    transition: 'filter 0.4s ease-in-out',
   },
   link: {
     lineHeight: 0,
