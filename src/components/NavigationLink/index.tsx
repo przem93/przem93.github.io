@@ -11,16 +11,19 @@ interface Props {
   text: string
 }
 
+const textShadow = `5px 7px 0 ${colorTokens.green1}`
+
 const styles = stylex.create({
   link: {
     textDecoration: 'none',
     textShadow: {
       default: 'none',
-      ':hover': `3px 4px 0 ${colorTokens.green1}`
+      ':hover': textShadow
     },
+    transition: 'text-shadow 0.3s ease-in-out'
   },
   current: {
-    textShadow: `3px 4px 0 ${colorTokens.green1}`
+    textShadow
   }
 })
 
